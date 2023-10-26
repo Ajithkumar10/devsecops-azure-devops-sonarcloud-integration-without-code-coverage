@@ -6,5 +6,5 @@ pool:
 
 steps:
 - script: |
-    mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=azuredevsecopssonar -Dsonar.projectKey=azuredevsecopssonar_azuredevsecopssonar -Dsonar.login=f951c32a63a95aaa1640dc9f623adf352c04d09d
+    mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=azuredevsecopssonar -Dsonar.projectKey=azuredevsecopssonar_azuredevsecopssonar -Dsonar.login=TOKEN
   displayName: "Integrate SAST using SonarCloud in Azure DevOps DevSecOps Pipeline"
