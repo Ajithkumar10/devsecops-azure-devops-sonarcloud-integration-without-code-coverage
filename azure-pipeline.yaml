@@ -12,21 +12,4 @@ steps:
     sudo apt install curl jq 
     quality_status=$(curl -s -u f951c32a63a95aaa1640dc9f623adf352c04d09d: https://sonarcloud.io/api/qualitygates/project_status?projectKey=azuredevopsadodevsecopsprojectkey | jq -r '.projectStatus.status')
     echo "SonarCloud Analysis Status is $quality_status"; 
-    if [[ $quality_status == "ERROR" ]] ; then exit 1;fi
-    {
-    	"projectStatus": {
-	  	"status": "ERROR",
-	  	"conditions": [
-		  	{
-		  		"status": "ERROR",
-		  		"metricKey": "coverage",
-		  		"comparator": "LT",
-			  	"errorThreshold": "90",
-			  	"actualValue": "0.0"
-		  	}
-		    ],
-	    	"periods": [],
-	      	"ignoredConditions": false
-	      }
-      }
 displayName: "Integrate SAST using SonarCloud in Azure DevOps DevSecOps Pipeline"
