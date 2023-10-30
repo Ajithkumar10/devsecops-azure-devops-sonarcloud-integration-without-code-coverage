@@ -12,4 +12,4 @@ steps:
     sudo apt install curl jq 
     quality_status=$(curl -s -u f951c32a63a95aaa1640dc9f623adf352c04d09d: https://sonarcloud.io/api/qualitygates/project_status?projectKey=ajithkumar10_ajithkumar10 | jq -r '.projectStatus.status')
     echo "SonarCloud Analysis Status is $quality_status"; 
-displayName: "Integrate SAST using SonarCloud in Azure DevOps DevSecOps Pipeline"
+  displayName: "Integrate SAST using SonarCloud in Azure DevOps DevSecOps Pipeline"
