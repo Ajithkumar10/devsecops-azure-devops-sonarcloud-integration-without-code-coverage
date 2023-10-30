@@ -6,10 +6,10 @@ pool:
 
 steps:
 - script: |
-    mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=azuredevsecopssonar1 -Dsonar.projectKey=azuredevsecopssonar1_azuredevsecopssonar1 -Dsonar.token=f951c32a63a95aaa1640dc9f623adf352c04d09d
+    mvn verify package sonar:sonar -Dsonar.host.url=https://sonarcloud.io/ -Dsonar.organization=ajithkumar10 -Dsonar.projectKey=ajithkumar10_ajithkumar10 -Dsonar.token=f951c32a63a95aaa1640dc9f623adf352c04d09d
     sleep 5
     sudo apt update
     sudo apt install curl jq 
-    quality_status=$(curl -s -u f951c32a63a95aaa1640dc9f623adf352c04d09d: https://sonarcloud.io/api/qualitygates/project_status?projectKey=azuredevsecopssonar1_azuredevsecopssonar1 | jq -r '.projectStatus.status')
+    quality_status=$(curl -s -u f951c32a63a95aaa1640dc9f623adf352c04d09d: https://sonarcloud.io/api/qualitygates/project_status?projectKey=ajithkumar10_ajithkumar10 | jq -r '.projectStatus.status')
     echo "SonarCloud Analysis Status is $quality_status"; 
 displayName: "Integrate SAST using SonarCloud in Azure DevOps DevSecOps Pipeline"
